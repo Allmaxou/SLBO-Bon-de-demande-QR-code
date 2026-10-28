@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Accès rapide aux documents et formulaires de l'établissement.">
+    <meta name="theme-color" content="#005e63">
+    <title>Document | Clinique Saint-Luc Bouge Laboratoire</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="site-header" aria-label="En-tête de l'établissement">
+        <img class="brand-logo" src="clinique-saint-luc-logo.png" alt="Clinique Saint-Luc Bouge">
+      </header>
+
+      <section class="card" aria-labelledby="document-title">
+        <div id="status-message" class="status status-error" role="alert" hidden></div>
+
+        <p class="eyebrow">Document d'information</p>
+        <h1 id="document-title">Chargement du document…</h1>
+        <p id="scan-code" class="scan-code" aria-label="Référence du document">—</p>
+
+        <p class="form-intro">Envie d'une prescription électronique ? Contactez-nous via ce formulaire.</p>
+        <a id="form-link" class="button" href="#" target="_blank" rel="noopener noreferrer" hidden>
+          Accéder au formulaire Google Form
+        </a>
+        <p id="no-form-message" class="muted" hidden>Le formulaire associé n'est pas disponible.</p>
+      </section>
+
+      <footer class="site-footer">
+        <p>Dernière mise à jour : <time id="document-date" datetime="">—</time></p>
+        <p>Pour toute question, adressez-vous au personnel de l'établissement.</p>
+      </footer>
+    </main>
+  </body>
+</html>

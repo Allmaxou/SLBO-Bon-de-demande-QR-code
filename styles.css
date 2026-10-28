@@ -1,0 +1,134 @@
+:root {
+  color-scheme: light;
+  --blue: #005e63;
+  --blue-dark: #004448;
+  --blue-soft: #e9f7f4;
+  --text: #173d3e;
+  --muted: #527274;
+  --border: #d2e6e3;
+  --mint: #3fb8a8;
+  --error: #9e2b25;
+  --error-soft: #fff0ef;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f5f8f9;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.page-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0 2rem;
+}
+
+.brand-logo {
+  display: block;
+  width: min(100%, 19.375rem);
+  height: auto;
+}
+
+.eyebrow {
+  margin: 0 0 0.35rem;
+  color: var(--blue);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.brand-name {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.card {
+  flex: 1;
+  padding: clamp(1.25rem, 5vw, 2.5rem);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: #fff;
+  box-shadow: 0 0.5rem 1.5rem rgb(0 68 72 / 8%);
+}
+
+h1 {
+  margin: 0.25rem 0 0.35rem;
+  color: var(--blue-dark);
+  font-size: clamp(1.6rem, 6vw, 2.2rem);
+  line-height: 1.2;
+}
+
+.scan-code {
+  margin: 0 0 2rem;
+  color: var(--muted);
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+}
+
+.form-intro {
+  margin: 0 0 0.9rem;
+  color: var(--text);
+}
+
+.button {
+  display: block;
+  padding: 0.9rem 1.25rem;
+  border-radius: 0.45rem;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button:hover,
+.button:focus-visible {
+  background: var(--blue-dark);
+}
+
+.button:focus-visible {
+  outline: 3px solid var(--mint);
+  outline-offset: 3px;
+}
+
+.status {
+  margin-bottom: 1.5rem;
+  padding: 0.85rem 1rem;
+  border-radius: 0.45rem;
+}
+
+.status-error {
+  border: 1px solid #e6aaa6;
+  background: var(--error-soft);
+  color: var(--error);
+}
+
+.muted,
+.site-footer {
+  color: var(--muted);
+}
+
+.site-footer {
+  padding: 1.5rem 0 0.5rem;
+  font-size: 0.85rem;
+  text-align: center;
+}
