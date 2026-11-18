@@ -41,9 +41,22 @@ function getDocumentId() {
   return params.get("doc") || params.get("v") || DEFAULT_DOCUMENT_ID;
 }
 
+function getScanSide() {
+  const side = new URLSearchParams(window.location.search).get("side")?.toLowerCase();
+
+  if (side === "recto" || side === "verso") {
+    return side;
+  }
+
+  return null;
+}
+
 function displayDocument(documentData, id) {
+  const scanSide = getScanSide();
+
   titleElement.textContent = documentData.title;
-  scanCodeElement.textContent = `${documentData.scanCode} ${documentData.deployedAt}`;
+  const sideSuffix = scanSide ? `_${scanSide}` : "";
+  scanCodeElement.textContent = `${documentData.scanCode}${sideSuffix} ${documentData.deployedAt}`;
   dateElement.textContent = formatDate(documentData.updatedAt);
   dateElement.dateTime = documentData.updatedAt;
 
